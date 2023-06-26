@@ -1,5 +1,5 @@
 import "./App.css";
-import PathFindingVisualizer from "./PathFindingVisualizer/PathFindingVisualizer";
+import PathFindingVisualizer from "./components/PathFindingVisualizer/PathFindingVisualizer";
 function App() {
   return (
     <div className="App">
