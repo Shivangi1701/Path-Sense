@@ -4,17 +4,32 @@ import './Node.css';
 
 export default class Node extends Component {
   render() {
-    const {isStart, isFinish, isVisited } = this.props;
+    const {
+      col,
+      isStart, 
+      isFinish, 
+      isWall,
+      onMouseDown,
+      onMouseEnter,
+      onMouseUp,
+      row,
+    } = this.props;
     const extraClassName = isFinish
       ? 'node-finish'
       : isStart
       ? 'node-start'
-      : isVisited
-      ? 'node-visited'
+      : isWall
+      ? 'node-wall'
       : '';
 
     return (
-      <div className={`node ${extraClassName}`}></div>
+      <div 
+        id={`node-${row}-${col}`}
+        className={`node ${extraClassName}`}
+        onMouseDown={() => onMouseDown(row, col)} // just press not release
+        onMouseEnter={() => onMouseEnter(row, col)} // hovering above 
+        onMouseUp={() => onMouseUp()} // when you release
+      ></div>
     );
   }
 }
