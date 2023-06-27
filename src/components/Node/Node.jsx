@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import './Node.css';
 
 export default class Node extends Component {
+  
   render() {
     const {
       col,
@@ -24,7 +25,7 @@ export default class Node extends Component {
 
     return (
       <div 
-        id={`node-${row}-${col}`}
+        id={`node-${row}-${col}`} // so that we can get it by document.getElementById also can use react ref
         className={`node ${extraClassName}`}
         onMouseDown={() => onMouseDown(row, col)} // just press not release
         onMouseEnter={() => onMouseEnter(row, col)} // hovering above 

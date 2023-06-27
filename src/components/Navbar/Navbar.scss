@@ -1,0 +1,22 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(77, 3, 77);
+    .container{
+        display: flex;
+        justify-content: space-between;
+        .title{
+            font-weight: 500;
+            font-size: 18px;
+            color: white;
+        }
+        button{
+            background-color: rgb(74, 178, 74);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+}
