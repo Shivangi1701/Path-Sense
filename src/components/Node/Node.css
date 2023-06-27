@@ -50,7 +50,6 @@
 .node-wall {
     background-color:rgb(12, 53, 71);
 }
-
 .node-shortest-path {
     background-color: yellow;
     animation-name: shortestPath;
